@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#2A2438;
+}
+.container{
+    padding:5%;
+    display: flex;
+    justify-content:space-between;
+    padding-bottom:0%;
+}
+.container .menu{
+    width:80%;
+}
+.container .menu .header{
+    font-family:Gilroy;
+    color:white;
+}
+.container .menu .header p{
+    font-family:Open Sans;
+    opacity:0.5;
+}
+.container .menu .tags{
+    margin-top:5%;
+}
+.container .menu .tags .tag{
+    height:70px;
+    width:200px;
+    background-color:#352F44;
+    color:white;
+    font-family:Poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:5px;
+}
+.container .menu .tags .tag .icon{
+    height:40px;
+    width:40px;
+    margin-right:5%;
+}
+.container .menu .tags .tag .icon img{
+    width:100%;
+}
+.container .orders{
+    width:30%;
+    padding-left:5%;
+}
+.container .orders .header h1{
+    font-family:Gilroy;
+    color:white;
+}
+.container .orders .header p{
+    font-family:Open Sans;
+    color:white;
+    opacity:0.5;
+}
+/* burgers */
+.container .burgers{
+    height:350px;
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:5%;
+    overflow:auto;
+    scroll-behavior:smooth;
+}
+.container .burgers::-webkit-scrollbar{
+    -webkit-appearance:none;
+    width:8px;
+}
+.container .burgers::-webkit-scrollbar-track{
+    background-color:#352F44;
+    border-radius:12px;
+}
+.container .burgers::-webkit-scrollbar-thumb{
+    background-color:#262130;
+}
+.container .burgers .burger{
+    height:280px;
+    width:230px;
+    background-color:#352F44;
+    border-radius:12px;
+    padding:2%;
+    margin:2%;
+    margin-left:0%;
+}
+.container .burgers .burger .image{
+    height:150px;
+    width:230px;
+    overflow: hidden;
+    border-radius:12px;
+}
+.container .burgers .burger .image img{
+    width:100%;
+}
+.container .burgers .burger .title{
+    font-family:Poppins;
+    color:white;
+    font-size:1.2rem;
+    margin-top:5%;
+    height:60px;
+    overflow: hidden;
+    font-weight:bolder;
+}
+.container .burgers .burger .bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.container .burgers .burger .bottom .price{
+    color:#EA3C53;
+    font-family:Gilroy;
+    font-size:2rem;
+}
+.container .burgers .burger .bottom .cart i{
+    color:white;
+    font-size:2rem;
+    cursor: pointer;
+}
+/* orderdburger */
+.orderdburgers{
+    margin-top:5%;
+    height:250px;
+    overflow-y: auto;
+    width:450px;
+    margin-bottom:5%;
+}
+.container .orderdburgers::-webkit-scrollbar{
+    -webkit-appearance:none;
+    width:8px;
+}
+.container .orderdburgers::-webkit-scrollbar-track{
+    background-color:#352F44;
+    border-radius:12px;
+}
+.container .orderdburgers::-webkit-scrollbar-thumb{
+    background-color:#262130;
+}
+.orderdburgers .burger{
+    height:80px;
+    width:400px;
+    background-color:#352F44;
+    border-radius:12px;
+    display: flex;
+    align-items: center;
+    padding-left:5%;
+    margin-bottom:5%;
+}
+.orderdburgers .burger .icon{
+    height:60px;
+    width:60px;
+    overflow: hidden;
+    border-radius:12px;
+    margin-right:5%;
+}
+.orderdburgers .burger .icon img{
+    width:150%;
+}
+.orderdburgers .burger .title{
+    font-family:Poppins;
+    color:white;
+    font-size:0.5rem;
+}
+.orderdburgers .burger .title h1{
+    width:250px;
+    overflow: hidden;
+}
+.orderdburgers .burger .title p{
+    font-family:Gilroy;
+    color:white;
+    opacity:0.5;
+    font-size:1rem;
+}
+.orderdburgers .burger .delete i{
+    font-size:2rem;
+    color:#EA3C53;
+    cursor: pointer;
+}
+.orders .bill{
+    height:280px;
+    width:400px;
+    background-color:#352F44;
+    border-radius:12px;
+    padding:2%;
+}
+.orders .bill .cash{
+    color:rgb(255, 255, 255,0.5);
+    font-family:Poppins;
+    display:flex;
+    justify-content:space-between;
+    padding-right:5%;
+    margin-top:5%;
+    padding-left:5%;
+}
+.orders .bill .total{
+    border-top:2px dashed white;
+    padding-top:5%;
+}
+.orders .bill span{
+    color:white;
+    opacity:1;
+}
+.orders .bill .button{
+    width:400px;
+    display: flex;
+    justify-content: center;
+    margin-top:10%;
+}
+.orders .bill .button button{
+    height:80px;
+    width:400px;
+    border-radius:12px;
+    background-color:#EA3C53;
+    color:white;
+    font-family:Gilroy;
+    font-size:1.5rem;
+    cursor: pointer;
+    border:none;
+}

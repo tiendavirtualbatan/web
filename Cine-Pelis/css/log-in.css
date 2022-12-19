@@ -1,0 +1,38 @@
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.hide {
+  display: none;
+}
+
+.img-user {
+  width: 100px;
+  margin-left: 18px;
+}
+
+.margin-left {
+  margin-top: 20px;
+}
+
+.letter-user {
+  color: white;
+}
+
+a:not([href]):not([tabindex]) {
+  color: #47D7AC;
+}

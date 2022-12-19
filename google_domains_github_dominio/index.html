@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" class=" ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dominio personalizado con Dominios de Google y páginas de Github</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body><a class="skip-link" href="#main-content">saltar al contenido</a>
+    <header role="banner" class="[ site-head ] [ pad-bottom-700 pad-top-700">
+        <div class="wrapper">
+            <div class="[ site-head__inner ] [ md:box-flex space-between align-center ]"><a href="https://tiendavirtualbatan.com/"
+                    class="[ site-head__site-name ] [ leading-tight ]"><span class="visually-hidden"></span> <span
+                        class="[ site-head__site-name ] [ text-600 ]" aria-hidden="true">Tienda Virtual Batan</span></a>
+                <nav class="nav" aria-label="navigation">
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <article class="[ post ] [ h-entry ]">
+            <header class="[ intro ] [ pad-top-900 pad-bottom-max ]">
+                <div class="[ inner-wrapper ] [ sf-flow ]">
+                    <h1 class="[ intro__heading ] [ text-800 md:text-900 leading-tight ] [ p-name ]">Dominio
+                        Personalizado con los dominios de Google y las páginas de Github</h1>
+                    <div class="[ intro__summary ] [ sf-flow ] [ leading-mid measure-short ]">Usando un
+                        Dominio personalizado con Google Dominios y Páginas Github para su sitio web/blog estático</div>
+                </div>
+            </header>
+            <div class="[ support ] [ inner-wrapper ] [ sf-flow ] [ text-500 ]">
+                <p>Si este contenido lo ayuda, considere apoyar mi trabajo a través de <a class="[ support__link ]"
+                        href="https://paypal.me/emiryuliana" target="_blank">PayPal</a></p>
+            </div>
+            <div
+                class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-500 text-500 ] [ sf-flow ] [ e-content ]">
+                <p>Siguiendo los ejemplos hasta ahora, ya tenemos nuestro sitio web alojado en las páginas de GitHub y
+                    accesible a través de
+                    Nombre de url o ??????.github.io, pero lo que realmente queremos es tener algo más
+                    personalizado, como un dominio .dev, que el Google
+                    lanzado recientemente, ¿Correcto?</p>
+                <p>Aprenderemos cómo configurar las páginas de GitHub con Google Dominios (o Google Domans con
+                    Páginas de Github).</p>
+                <h2 id="heading-registrando-um-dominio-no-google-domains">Registrar un dominio en los dominios de Google
+                </h2>
+                <p>Acceda a la URL <a href="https://domains.google">https://domains.google</a> y haga clic en Buscar un
+                    Dominio (o encontrar al dominio.</p>
+                <p><img src="https://d33wubrfki0l68.cloudfront.net/b33c181adda337589cd9278aab2fc828cc4477aa/1b587/images/posts/domains-google.png"
+                        alt="Tela do Google Domains" loading="lazy" width="1074" height="736"></p>
+                <p>Deberá iniciar sesión con su Gmail.</p>
+                <p>Los caminos de ejemplo, busqué<strong>ejemplo.com</strong>En el campo de búsqueda y google me
+                    muestra que el dominio está disponible.</p>
+                <p><img src="https://d33wubrfki0l68.cloudfront.net/7d29bfd7f44248967fce68faa053a21ca9da702e/2644d/images/posts/exemplo-dev-domains-google.png"
+                        alt="Exemplo de pesquisa no Google Domains" loading="lazy" width="1080" height="738"></p>
+                <p>Si quería registrar este dominio, simplemente haga clic en el carrito y siga la compra.</p>
+                <h2 id="heading-adicionando-o-dominio-customizado-no-github-pages">Agregar el dominio personalizado en la
+                    Página de Github</h2>
+                <p>Ir a la pestaña <strong>settings</strong> del repositorio (que es su sitio web .github.io) y ve por la pantalla
+                    Hasta la sesión<em> GitHub Pages</em>. Coloque el dominio en el campo de dominio personalizado y haga clic en Guardar.</p>
+                <p>En mi ejemplo, tengo el aprendiz Mastery.dev, así que eso es lo que puse en este campo.</p>
+                <p><img src="https://d33wubrfki0l68.cloudfront.net/bbd817e04b496c5b9a87df5b346057684d98a9aa/a68ef/images/posts/add-custom-domain-github-pages.png"
+                        alt="Adicionando um domínio personalizado no GitHub Pages" loading="lazy" width="680"
+                        height="534"></p>
+                <p>Ahora necesitará cambiar DNS en Google Domans.</p>
+                <h2 id="heading-alterando-o-dns-no-google-domains"><a name="AlterandooDNSnoGoogleDomains"></a>Alteración
+                    o DNS no Google Domains</h2>
+                <p>En la interfaz administrativa de Google Domains (haga clic en Administrar o administrar en el "My
+                    Dominios ”en los dominios de Google) para su dominio recién comprado (o no) haga clic en la pestaña DNS.</p>
+                <p><img src="https://d33wubrfki0l68.cloudfront.net/f3f49b41e3dfa38d45c84b75b47cc3e4c225f152/8ee29/images/posts/nameservers-google-domains.png"
+                        alt="Interface administrativa de DNS do Google Domains" loading="lazy" width="1346"
+                        height="630"></p>
+                <p>Vaya a la sesión de "recursos personalizados" o registros de recursos personalizados y agregue los hosts de
+                    GitHub con el tipo de entrada como<strong> A</strong>. El resto que puedes ir como es, solo
+                    cambiar el tipo de entrada a <strong>A</strong> y agregue las direcciones IP:</p>
+                <ul>
+                    <li><strong>185.199.108.153</strong></li>
+                    <li><strong>185.199.109.153</strong></li>
+                    <li><strong>185.199.110.153</strong></li>
+                    <li><strong>185.199.111.153</strong></li>
+                </ul>
+                <p><img src="https://d33wubrfki0l68.cloudfront.net/f417892c98a495659ad60515cdcd49a32de1a937/72340/images/posts/add-github-nameservers-google-domains.png"
+                        alt="Adicionando os endereços de IP em Custom Resource Records" loading="lazy" width="1030"
+                        height="424"></p>
+                <p>Ahora agregue el<strong>CNAME</strong> señalando el enlace desde .github.io.Será el mismo proceso de
+                    Agregar un registro de tipo<strong>A</strong>, Pero debes poner como tipo
+                    <strong>CNAME</strong>, En la primera entrada agrega un <strong>www</strong> Y luego pon el
+                    Dirección de páginas GitHub (en mi ejemplo es el aprendiz.github.io) para su repositorio en el último
+                    Aporte.
+                </p>
+                <p><img src="https://d33wubrfki0l68.cloudfront.net/09ca92f3e38e08f20440fa2967d2eaa71acb3b10/58f36/images/posts/cname-google-domains.png"
+                        alt="Adicionando o CNAME no Google Domains" loading="lazy" width="996" height="172"></p>
+                <p>Si todo salió bien, ahora puedes acceder a tu site ¡en la nube!- Este paso puede tomar un poco
+                    (minutos), ya que los DNS pueden tardar en propagar.</p>
+                <p>Ahora, si entras verás el contenido
+                </p>
+
+            </div>
+            <div
+                class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
+            </div>
+            <footer class="[ post__footer ] [ pad-top-500 pad-bottom-500 ]">
+                <div class="inner-wrapper">
+                </div>
+            </footer>
+        </article>
+    </main>
+    <footer role="contentinfo" class="[ site-foot ] [ pad-top-700 pad-bottom-900 ]">
+    </footer>
+</body>
+
+</html>

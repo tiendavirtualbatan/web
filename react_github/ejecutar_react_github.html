@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="utf-8">
+   <title>⚡ Despliega una aplicación de react a github pages con github actions facilmente</title>
+   <link rel="stylesheet" href="minimal.css"
+      media="all" id="main-minimal-stylesheet" />
+   <link rel="stylesheet" href="views.css" media="all"
+      id="main-views-stylesheet" />
+   <link rel="stylesheet" href="crayons.css"
+      media="all" id="main-crayons-stylesheet" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+</head>
+
+<body>
+   <div id="page-content" class="wrapper stories stories-show" data-current-page="stories-show">
+      <div id="page-content-inner">
+         <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+         <div class="crayons-layout crayons-layout--3-cols crayons-layout--article">
+            <aside class="crayons-layout__sidebar-left" aria-label="Article actions">
+               <div class="crayons-article-actions print-hidden">
+                  <div class="crayons-article-actions__inner">
+                     <div id="mod-actions-menu-btn-area" class="print-hidden hidden align-center"></div>
+                     <div class="align-center m:relative">
+                     </div>
+                  </div>
+               </div>
+            </aside>
+            <main id="main-content" class="crayons-layout__content grid gap-4">
+               <div class="article-wrapper">
+                  <article class="crayons-card crayons-article mb-4" id="article-show-container">
+                     <header class="crayons-article__header" id="main-title">
+                        <div class="crayons-article__header__meta">
+                           <h1 class="fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
+                              ⚡ Despliega una aplicación de react a github pages con github actions facilmente
+                              ⚡
+                           </h1>
+                        </div>
+                     </header>
+                     <div class="crayons-article__main">
+                        <div class="crayons-article__body text-styles spec__body" data-article-id="485197"
+                           id="article-body">
+                           <p>En este post te mostraré los pasos para <strong>desplegar tu aplicación realizada
+                                 en react sobre github pages</strong>. Además te mostraremos como hacer el
+                              proceso de despliegue de forma automática cada vez que realices cambios y lo
+                              envíes al repositorio tu aplicación web pueda verse reflejada con los nuevos
+                              cambios.<br>
+                              Realizar esto te ahorrará tiempo y lo mejor, todos podrán ver los cambios que
+                              tiene tu aplicación.
+                           </p>
+                           <h2>
+                              <a name="que-es-github-pages" href="#que-es-github-pages">
+                              </a>
+                              Que es github pages?
+                           </h2>
+                           <p>Github pages es un servicio de hosting en el cual podemos publicar páginas
+                              estaticas desarrolladas con js, css, html, en el cual podemos utilizar distintas
+                              librerías o frameworks como:
+                           </p>
+                           <ul>
+                              <li>React</li>
+                              <li>Vue</li>
+                              <li>Angular</li>
+                              <li>Svelte </li>
+                           </ul>
+                           <p>En esta oportunidad veremos como subir una aplicación utilizando react con la cli
+                              <strong>create-react-app</strong>.
+                           </p>
+                           <h2>
+                              <a name="comencemos" href="#comencemos">
+                              </a>
+                              Comencemos
+                           </h2>
+                           <p>Para poder comenzar debemos tener instalado node, también la cli de react llamada
+                              <strong>create-react-app</strong>.<br>
+                              <strong>1. Crear una aplicación</strong><br>
+                              Utilizamos el comando y le asignamos un nombre en este caso el nombre de mi
+                              aplicación tiene por nombre "deploy-react-github-pages-with-ci"<br>
+                           </p>
+                           <div class="highlight js-code-highlight">
+                              <pre class="highlight console"><code><span class="gp">&gt;</span><span class="w"> </span>create-react-app deploy-react-github-pages-with-ci
+</code></pre>
+                           </div>
+                           <p>Una vez creado el proyecto podemos ver la estructura inicial la cual nos crea.
+                           </p>
+                           <p><a href="img/uv68o5j6ciiy1281gvim.webp" class="article-body-image-wrapper"><img
+                                    src="img/uv68o5j6ciiy1281gvim.webp" alt="Captura" loading="lazy"></a></p>
+                           <p>También necesitamos instalar el paquete npm <strong>gh-pages</strong> como
+                              dependencia de desarrollo.<br>
+                           </p>
+                           <div class="highlight js-code-highlight">
+                              <pre class="highlight console"><code><span class="gp">&gt;</span><span class="w"> </span>npm i <span class="nt">-D</span> gh-pages
+</code></pre>
+                           </div>
+                           <p><strong>2. Crear los archivos necesarios</strong></p>
+                           <p>En la raíz de nuestro proyecto creamos una carpeta llamada
+                              <strong>.github</strong>, posteriormente dentro de ella otra carpeta que tenga
+                              por nombre <strong>workflows</strong>.<br>
+                              Finalmente agregamos un nuevo archivo con extensión <strong>.yml</strong>, se
+                              puede poner el nombre que se quiera, en este caso se denominará
+                              <strong>deploy.yml</strong>.
+                           </p>
+                           <p><a href="img/gqb9y8wt7kaxgdl4x1ux.webp" class="article-body-image-wrapper"><img
+                                    src="img/gqb9y8wt7kaxgdl4x1ux.webp" alt="efj4ew5p550g0192jwpjwp20924fj02j"
+                                    loading="lazy"></a></p>
+                           <p><strong>3.Configurando nuestro repositorio</strong></p>
+                           <p>Para poder acceder y publicar nuestro proyecto necesitamos primeramente obtener
+                              un token el cuál nos servirá para seguir avanzando.
+                           </p>
+                           <p>Los pasos para configurar son los siguientes:</p>
+                           <ul>
+                              <li>1. Vamos a las configuraciones de nuestra cuenta, no la del repositorio ya
+                                 que si vamos allí no encontraríamos lo que buscamos.
+                              </li>
+                              <li>2. Seleccionamos la opción <strong>Developer settings</strong> y accedemos
+                                 ah aquella.
+                              </li>
+                           </ul>
+                           <p><a href="img/a4goirchnt36xskitgvi.webp" class="article-body-image-wrapper"><img
+                                    src="img/a4goirchnt36xskitgvi.webp" alt="github932930303j2" loading="lazy"></a></p>
+                           <ul>
+                              <li>3.Uno ves dentro nos aparecerán otras opciones entre las cuales elegimos la
+                                 siguiente: <strong>Personal access tokens</strong>. Nos saldrá la opción de
+                                 crear un nuevo token, lo generamos y una vez echo esto lo mantenemos copiado
+                                 para usarlo en las configuraciones de nuestro repositorio.
+                              </li>
+                           </ul>
+                           <p><a href="img/bbc0xk1yrob1h0946rzw.webp" class="article-body-image-wrapper"><img
+                                    src="img/bbc0xk1yrob1h0946rzw.webp" alt="github92350295320" loading="lazy"></a></p>
+                           <ul>
+                              <li>4. Finalmente nos vamos a la configuración de nuestro repositorio, asignamos
+                                 un nombre a nuestra clave secreta y en el <strong>value</strong> copiamos
+                                 nuestro token generado anteriormente
+                              </li>
+                           </ul>
+                           <p><a href="img/f0k9ovmuryntd8mn7ev9.webp" class="article-body-image-wrapper"><img
+                                    src="img/f0k9ovmuryntd8mn7ev9.webp" alt="github92302902" loading="lazy"></a></p>
+                           <h2>
+                              <a name="configuraci%C3%B3n-de-nuestra-aplicaci%C3%B3n-de-react"
+                                 href="#configuraci%C3%B3n-de-nuestra-aplicaci%C3%B3n-de-react">
+                              </a>
+                              Configuración de nuestra aplicación de react
+                           </h2>
+                           <ul>
+                              <li>1. Para realizar esto lo primero es ir al <strong>package.json</strong> y
+                                 agregar una nueva propiedad llamada <strong>homepage</strong> en la cuál
+                                 recibe como valor el nombre de donde se va desplegar nuestra aplicación.
+                                 ¿Como generamos este nombre del hosting?, normalmente nuestro repositorio
+                                 tiene la estructura siguiente
+                              </li>
+                           </ul>
+                           <p><strong>"github.com/jhony-24/deploy-react-github-pages-with-ci"</strong></p>
+                           <p>Si queremos usarlo para subir nuestro aplicación debemos cambiarlo por lo
+                              siguiente:
+                           </p>
+                           <p><strong>"jhony-24.github.io/deploy-react-github-pages-with-ci/"</strong> </p>
+                           <p><a href="img/szrswj4x8ribvo3sztzy.webp" class="article-body-image-wrapper"><img
+                                    src="img/szrswj4x8ribvo3sztzy.webp" alt="ápkfáfjé" loading="lazy"></a></p>
+                           <ul>
+                              <li>3. En nuestro script del package.json agregamos las siguientes líneas:
+                                 predeploy y deploy las cuales nos servirán para publicar nuestra aplicación.
+                                 La variable de entorno <em>$GH_TOKEN</em> es el token que generamos en
+                                 nuestra configuración la cual nos permitirá tener acceso a nuestro
+                                 repositorio.
+                                 <img src="img/by2adsdi6paiylyxziwf.webp" alt="afpojapojfpqjow" loading="lazy">
+                              </li>
+                           </ul>
+                           <h2>
+                              <a name="configurando-las-acciones" href="#configurando-las-acciones">
+                              </a>
+                              Configurando las acciones
+                           </h2>
+                           <p>En nuestro archivo creado <strong>deploy.yml</strong> procedemos a realizar la
+                              siguientes configuración <br>
+                              <a href="img/bc848bujgm56sjs01sln.webp" class="article-body-image-wrapper"><img
+                                    src="img/bc848bujgm56sjs01sln.webp" alt="aagñepwj4302d" loading="lazy"></a>
+                           </p>
+                           <p>Veamos más a fondo como funciona.<br>
+                           </p>
+                           <div class="highlight js-code-highlight">
+                              <pre class="highlight yaml"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Deploy react app</span>
+</code></pre>
+                           </div>
+                           <p>Es el principal nombre el cual se asigna a nuestro flujo de trabajo.<br>
+                           </p>
+                           <div class="highlight js-code-highlight">
+                              <pre class="highlight yaml"><code><span class="na">on</span><span class="pi">:</span>
+ <span class="na">push</span><span class="pi">:</span> 
+   <span class="na">branches</span><span class="pi">:</span>
+     <span class="pi">-</span> <span class="s">main</span>
+</code></pre>
+                           </div>
+                           <p>Nos permite crear eventos en este caso las acciones se realizarán cuando se suba
+                              las confirmaciones a la rama <strong>main</strong> o la principal en la cual
+                              estamos trabajando, si queremos podemos cambiar a otra rama para hacer el
+                              despliegue por ejemplo, crearíamos una rama <strong>deploy</strong> y cada vez
+                              que realicemos un confirmación a esta rama se ejecutará los flujos de
+                              trabajos.<br>
+                           </p>
+                           <div class="highlight js-code-highlight">
+                              <pre class="highlight yaml"><code><span class="na">jobs</span><span class="pi">:</span>
+ <span class="na">deploy</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">deploy app</span>
+  <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+  <span class="na">strategy</span><span class="pi">:</span>
+   <span class="na">matrix</span><span class="pi">:</span>
+    <span class="na">node-version</span><span class="pi">:</span> <span class="pi">[</span> <span class="s2">"</span><span class="s">12.x"</span> <span class="pi">]</span>
+</code></pre>
+                           </div>
+                           <p>Como su nombre lo indica, son los trabajos que se realizarán.<br>
+                              En nuestro configuración solo tenemos un trabajo llamado <strong>deploy</strong>
+                              , aunque se puede tener muchos más.<br>
+                              Dentro de cada trabajador asignamos en que maquina va a correr nuestros
+                              comandos. <br>
+                              Y asignamos una matriz de versiones de node en las cuales correrá en este caso
+                              solo usamos para la versión 12.<br>
+                           </p>
+                           <div class="highlight js-code-highlight">
+                              <pre class="highlight yaml"><code><span class="na">steps</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+  <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-node@v1</span> 
+    <span class="na">with</span><span class="pi">:</span>
+      <span class="na">node-version</span><span class="pi">:</span> <span class="s">${{matrix.node-version}}</span>
+</code></pre>
+                           </div>
+                           <p>Usamos las acciones de node para poder ejecutar los comandos, véalo en este caso
+                              como si se instala programas que nos ayudan a ejecutar nuestros comandos y sean
+                              reconocibles en el sistema.<br>
+                           </p>
+                           <div class="highlight js-code-highlight">
+                              <pre class="highlight yaml"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">install packages</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="s">npm install</span>
+</code></pre>
+                           </div>
+                           <p>Instalamos nuestras dependencias.<br>
+                           </p>
+                           <div class="highlight js-code-highlight">
+                              <pre class="highlight yaml"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">registry github user</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">git config --global user.email &lt;email&gt;</span>
+    <span class="s">git config --global user.name &lt;name&gt;</span>
+</code></pre>
+                           </div>
+                           <p>Al ejecutar en una maquina el despliegue donde no estemos registrados con nuestra
+                              cuenta no funcionaría por ello antes de hacer el despliegue nos registramos (los
+                              pasos tienen un nombre para poder identificarlos).<br>
+                           </p>
+                           <div class="highlight js-code-highlight">
+                              <pre class="highlight yaml"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">deploy the app</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="s">npm run deploy</span>
+  <span class="na">env</span><span class="pi">:</span>
+   <span class="na">GH_TOKEN</span><span class="pi">:</span> <span class="s">${{ secrets.GH_TOKEN }}</span>
+</code></pre>
+                           </div>
+                           <p>Finalmente ejecutamos el comando para publicar nuestra aplicación. <br>
+                              Usamos una variable de entorno llamada <strong>GH_TOKEN</strong> la cual tiene
+                              como valor el token que anteriormente se creó y nos permitirá conectarnos a
+                              nuestra cuenta para realizar la acción.
+                           </p>
+                           <h2>
+                              <a name="enviando-los-cambios-al-repositorio" href="#enviando-los-cambios-al-repositorio">
+                              </a>
+                              Enviando los cambios al repositorio
+                           </h2>
+                           <p>Una vez completado todo lo anterior vamos a la consola y agregamos los cambios al
+                              repositorio.<br>
+                           </p>
+
+                           <p>Una vez subido los cambios al repositorio, vamos a nuestro repositorio en la
+                              opción <strong>actions</strong> si todo marcha bien podemos ver el siguiente
+                              resultado.<br>
+                              <a href="img/bfqqg9x6neyabptkuome.png" class="article-body-image-wrapper"><img
+                                    src="img/bfqqg9x6neyabptkuome.png" alt=" " loading="lazy"></a>
+                           </p>
+                           <p>Ahora como vemos nuestro aplicación? Vamos a la opción <strong>settings</strong>
+                              y buscamos <strong>Github Pages</strong>
+                           </p>
+                           <p>Accedemos al link y podemos ver el siguiente resultado.<a
+                                 href="img/2jrxoywjmr55w9enfio4.webp" class="article-body-image-wrapper"><img
+                                    src="img/2jrxoywjmr55w9enfio4.webp" alt="asfaffe" loading="lazy"></a></p>
+                           <p><a href="img/sak8xwf1iqnadcpf2hwf.png" class="article-body-image-wrapper"><img
+                                    src="img/sak8xwf1iqnadcpf2hwf.png" alt="deployTest1" loading="lazy"></a></p>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+            </main>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
