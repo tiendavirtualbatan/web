@@ -16,11 +16,11 @@
 <section class="tarjeta" id="tarjeta">
 <div class="delantera"><div class="logo-marca" id="logo-marca"><!-- <img src="img/logos/visa.png" alt=""> --></div>
 <img src="img/chip-tarjeta.png" class="chip" alt=""><div class="datos"><div class="grupo" id="numero"><p class="label">Número Tarjeta</p><p class="numero">#### #### #### ####</p></div>
-<div class="flexbox"><div class="grupo" id="nombre"><p class="label">Nombre Tarjeta</p><p class="nombre">Jhon Doe</p></div>
+<div class="flexbox"><div class="grupo" id="nombre"><p class="label">Nombre Tarjeta</p><p class="nombre">Tienda Virtual</p></div>
 <div class="grupo" id="expiracion"><p class="label">Expiracion</p><p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p></div></div></div></div>
 <div class="trasera"><div class="barra-magnetica"></div><div class="datos"><div class="grupo" id="firma"><p class="label">Firma</p><div class="firma"><p></p></div></div>
 <div class="grupo" id="ccv"><p class="label">CCV</p><p class="ccv"></p></div></div>
-<p class="leyenda">Tienda Virtual Batan, le ofrece sus productos de alta calidad y nuestro compromiso de transparencia</p><a href="#" class="link-banco">cualquier tarjeta</a></div></section>
+<p class="leyenda">Tienda Virtual Batan, le ofrece sus productos de alta calidad y nuestro compromiso de transparencia</p><a href="https://wa.me/50687895592" class="link-banco">WhatsApp</a></div></section>
 <!-- Contenedor Boton Abrir Formulario -->
 <div class="contenedor-btn"><button class="btn-abrir-formulario" id="btn-abrir-formulario"><i class="fas fa-plus"></i></button></div>
 <!-- Formulario -->
@@ -33,14 +33,10 @@
 			<div class="grupo ccv"><label for="inputCCV">CCV</label><input type="text" name="code" id="inputCCV" maxlength="3"></div></div>
 			<div class="grupo"><label for="inputNombre">Nombre</label><input type="text" name="commentary" id="inputNombre" maxlength="200" autocomplete="off"></div>
 			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-				  <span class="input-group-text">Archivo</span>
-				</div>
-				<div class="custom-file">
-				  <input type="file" name="my_file" id="my_file" class="custom-file-input" multiple>
-				  <label class="custom-file-label" for="inputGroupFile01">Hacer click aqui..!</label>
-				</div>
-			  </div>
+			<div class="input-group-prepend"><span class="input-group-text">Adjunte Archivo</span></div>
+			<br>
+			<div class="custom-file"><input type="file" name="my_file" id="my_file" class="custom-file-input" multiple></div>
+			 </div>
 			<button type="submit" class="btn-enviar">Enviar</button>
 			<input type="hidden" name="_next" value="https://tiendavirtualbatan.com/formulario-tarjeta-credito-3d-master/index.html">
 			<input type="hidden" name="_captcha" value="false">
