@@ -245,11 +245,9 @@ header nav a:hover{
     display: flex;
     justify-content: space-between;
 }
-#porfolio .fila .col1{
-    width: 20%;
-}
+
 #porfolio .fila .col{
-    width: 15%;
+    width: 30%;
 }
 #porfolio .fila .trabajo{
     border-radius: 10px;
