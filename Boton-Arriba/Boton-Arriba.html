@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="col-md-9">
+        <div class="article-view-container" style="margin-top:15px;">
+            <div class="article-view-header" style="height:100%;width:100%;">
+                <div class="article-view-header-content col-md-9 col-xs-12 col-sm-12">
+                    <h1 class="article-view-title">Cómo implementar el botón de “Volver a arriba” mediante CSS y jQuery
+                    </h1>
+
+                    <div class="banner-superior" style="text-align:center;float:left;width:100%;">
+
+
+
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9314112849612183"
+                            data-ad-slot="9441797648" data-ad-format="link"></ins>
+
+                        <br>
+
+
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9314112849612183"
+                            data-ad-slot="2058131648" data-ad-format="auto"></ins>
+
+
+                    </div>
+                    <div class="article-view-body">
+                        <div class="article-view-body-image"><img
+                                src="https://programacion.net/files/article/20170522060558_jQuery.jpg" width="100%"
+                                style="margin-bottom:15px;"></div>
+                        <div class="article-view-body-text">
+                            <p>Cuando una página web cuenta con muchísimo contenido, necesita de una opción para que los
+                                visitantes puedan ir a otras secciones de forma sencilla. Mediante jQuery, podemos tener
+                                una mejor interfaz de usuario añadiéndole un elemento que nos permita hacer scroll hacia
+                                la parte más superior de la página.
+                            </p>
+                            <p>En este tutorial, te mostraremos cómo crear un botón de “Volver a arriba” y sus usos.
+                                Haciendo clic en este botón, podrás desplazarte directamente y mediante una suave
+                                animación, hacia la parte más superior de la página. Este botón no estará presente
+                                permanentemente en la web, si no que aparecerá cuando el usuario se desplace lo
+                                suficiente hacia abajo en la web. Es por eso, en esta época en que las webs son súper
+                                largas y cuentan con mucho contenido, que agregar un botón de “Volver a arriba” puede
+                                convertirse en una muy buena idea.
+                            </p>
+                            <center>
+
+
+                                <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px"
+                                    data-ad-client="ca-pub-9314112849612183" data-ad-slot="6069528845"></ins>
+
+                            </center>
+                            <p>Utilizaremos jQuery y CSS para implementar este botón. En este tutorial, os describiré al
+                                detalle todo el proceso junto con código.
+                            </p>
+                            <h3>Javascript</h3>
+                            <p></p>
+                            <p>Lo primero que debes hacer es incluir la librería jQuery.
+                            </p>
+                            <pre
+                                class="prettyprint lang-"><span class="pun">&lt;</span><span class="tag">script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"</span><span class="pun">&gt;&lt;/</span><span class="tag">script</span><span class="pun">&gt;</span></pre>
+                            <p></p>
+                            <p>Tendremos que escribir algo de Javascript para trackear el scroll de la página y hacer
+                                que aparezca el botón si el usuario ha llegado lo suficientemente abajo. Utilizaremos la
+                                función scroll() para saber si se ha hecho scroll o no. Como puedes ver en el código de
+                                más abajo, si se ha desplazado más de 100px hacia abajo, el botón aparecerá, de lo
+                                contrario, lo ocultaremos.
+                            </p>
+                            <pre
+                                class="prettyprint lang-"><span class="pln">$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">scroll</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">scrollTop</span><span class="pun">()</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">100</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">'#scroll'</span><span class="pun">).</span><span class="pln">fadeIn</span><span class="pun">();</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">'#scroll'</span><span class="pun">).</span><span class="pln">fadeOut</span><span class="pun">();</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> <br></span><span class="pun">});</span></pre>
+                            <p></p>
+                            <p>Ahora vamos con la parte del clic al botón. Una vez se haya hecho clic en el botón,
+                                debemos hacer scroll hacia la parte más superior de la web. Para ello utilizaremos la
+                                función animate() y el evento scrollTop.
+                            </p>
+                            <pre
+                                class="prettyprint lang-"><span class="pln">$</span><span class="pun">(</span><span class="str">'#scroll'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"> <br>&nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">"html, body"</span><span class="pun">).</span><span class="pln">animate</span><span class="pun">({</span><span class="pln"> scrollTop</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="lit">600</span><span class="pun">);</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln"> <br></span><span class="pun">});</span></pre>
+                            <p></p>
+                            <p>Aquí tienes el código Javascript completo.
+                            </p>
+                            <pre
+                                class="prettyprint lang-"><span class="pun">&lt;</span><span class="tag">script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">'text/javascript'</span><span class="pun">&gt;</span><span class="pln"><br>$</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"> <br>&nbsp; &nbsp; $</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">scroll</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">scrollTop</span><span class="pun">()</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">100</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">'#scroll'</span><span class="pun">).</span><span class="pln">fadeIn</span><span class="pun">();</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">'#scroll'</span><span class="pun">).</span><span class="pln">fadeOut</span><span class="pun">();</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"> <br>&nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">'#scroll'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">"html, body"</span><span class="pun">).</span><span class="pln">animate</span><span class="pun">({</span><span class="pln"> scrollTop</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="lit">600</span><span class="pun">);</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"> <br></span><span class="pun">});</span><span class="pln"><br></span><span class="pun">&lt;/</span><span class="tag">script</span><span class="pun">&gt;</span></pre>
+                            <h3>CSS</h3>
+                            <p></p>
+                            <p>Ahora vamos con lo sencillito. Vamos a personalizar nuestro botón con algo de CSS.
+                            </p>
+                            <pre
+                                class="prettyprint lang-"><span class="com">#scroll {</span><span class="pln"><br>&nbsp; &nbsp; position</span><span class="pun">:</span><span class="kwd">fixed</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; right</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; bottom</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; cursor</span><span class="pun">:</span><span class="pln">pointer</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; width</span><span class="pun">:</span><span class="lit">50px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; height</span><span class="pun">:</span><span class="lit">50px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="com">#3498db;</span><span class="pln"><br>&nbsp; &nbsp; text</span><span class="pun">-</span><span class="pln">indent</span><span class="pun">:-</span><span class="lit">9999px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; display</span><span class="pun">:</span><span class="pln">none</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="lit">60px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="lit">60px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="lit">60px</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="com">#scroll span {</span><span class="pln"><br>&nbsp; &nbsp; position</span><span class="pun">:</span><span class="pln">absolute</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; top</span><span class="pun">:</span><span class="lit">50</span><span class="pun">%;</span><span class="pln"><br>&nbsp; &nbsp; left</span><span class="pun">:</span><span class="lit">50</span><span class="pun">%;</span><span class="pln"><br>&nbsp; &nbsp; margin</span><span class="pun">-</span><span class="pln">left</span><span class="pun">:-</span><span class="lit">8px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; margin</span><span class="pun">-</span><span class="pln">top</span><span class="pun">:-</span><span class="lit">12px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; height</span><span class="pun">:</span><span class="lit">0</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; width</span><span class="pun">:</span><span class="lit">0</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; border</span><span class="pun">:</span><span class="lit">8px</span><span class="pln"> solid transparent</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; border</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="com">#ffffff;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="com">#scroll:hover {</span><span class="pln"><br>&nbsp; &nbsp; background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="com">#e74c3c;</span><span class="pln"><br>&nbsp; &nbsp; opacity</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;</span><span class="pln">filter</span><span class="pun">:</span><span class="str">"alpha(opacity=100)"</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">filter</span><span class="pun">:</span><span class="str">"alpha(opacity=100)"</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span></pre>
+                            <h3>HTML</h3>
+                            <p></p>
+                            <p>El código de nuestro botón debería ser algo similar a:
+                            </p>
+                            <pre
+                                class="prettyprint lang-"><span class="pun">&lt;</span><span class="tag">a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"scroll"</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"Scroll to Top"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="str">display: none;</span><span class="atv">"</span><span class="pun">&gt;</span><span class="pln">Top</span><span class="pun">&lt;</span><span class="tag">span</span><span class="pun">&gt;&lt;/</span><span class="tag">span</span><span class="pun">&gt;&lt;/</span><span class="tag">a</span><span class="pun">&gt;</span></pre>
+                            <p></p>
+                            <p>Script de botón de “Volver a arriba” completo
+                            </p>
+                            <pre
+                                class="prettyprint lang-"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln"><br></span><span class="pun">&lt;</span><span class="tag">html</span><span class="pln"> </span><span class="atn">xmlns</span><span class="pun">=</span><span class="atv">"http://www.w3.org/1999/xhtml"</span><span class="pun">&gt;</span><span class="pln"><br></span><span class="pun">&lt;</span><span class="tag">head</span><span class="pun">&gt;</span><span class="pln"><br></span><span class="pun">&lt;</span><span class="tag">meta</span><span class="pln"> </span><span class="atn">http-equiv</span><span class="pun">=</span><span class="atv">"Content-Type"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"text/html; charset=utf-8"</span><span class="pln"> </span><span class="pun">/&gt;</span><span class="pln"><br></span><span class="pun">&lt;</span><span class="tag">title</span><span class="pun">&gt;</span><span class="pln">jQuery Back To Top Button by CodexWorld</span><span class="pun">&lt;/</span><span class="tag">title</span><span class="pun">&gt;</span><span class="pln"><br></span><span class="pun">&lt;</span><span class="tag">script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"</span><span class="pun">&gt;&lt;/</span><span class="tag">script</span><span class="pun">&gt;</span><span class="pln"><br></span><span class="pun">&lt;</span><span class="tag">script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">'text/javascript'</span><span class="pun">&gt;</span><span class="pln"><br>$</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"> <br>&nbsp; &nbsp; $</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">scroll</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">scrollTop</span><span class="pun">()</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">100</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">'#scroll'</span><span class="pun">).</span><span class="pln">fadeIn</span><span class="pun">();</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">'#scroll'</span><span class="pun">).</span><span class="pln">fadeOut</span><span class="pun">();</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"> <br>&nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">'#scroll'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">"html, body"</span><span class="pun">).</span><span class="pln">animate</span><span class="pun">({</span><span class="pln"> scrollTop</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="lit">600</span><span class="pun">);</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"> <br></span><span class="pun">});</span><span class="pln"><br></span><span class="pun">&lt;/</span><span class="tag">script</span><span class="pun">&gt;</span><span class="pln"><br></span><span class="pun">&lt;</span><span class="tag">style</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="pun">&gt;</span><span class="pln"><br></span><span class="com">/* BackToTop button css */</span><span class="pln"><br></span><span class="com">#scroll {</span><span class="pln"><br>&nbsp; &nbsp; position</span><span class="pun">:</span><span class="kwd">fixed</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; right</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; bottom</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; cursor</span><span class="pun">:</span><span class="pln">pointer</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; width</span><span class="pun">:</span><span class="lit">50px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; height</span><span class="pun">:</span><span class="lit">50px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="com">#3498db;</span><span class="pln"><br>&nbsp; &nbsp; text</span><span class="pun">-</span><span class="pln">indent</span><span class="pun">:-</span><span class="lit">9999px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; display</span><span class="pun">:</span><span class="pln">none</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="lit">60px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="lit">60px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="lit">60px</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="com">#scroll span {</span><span class="pln"><br>&nbsp; &nbsp; position</span><span class="pun">:</span><span class="pln">absolute</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; top</span><span class="pun">:</span><span class="lit">50</span><span class="pun">%;</span><span class="pln"><br>&nbsp; &nbsp; left</span><span class="pun">:</span><span class="lit">50</span><span class="pun">%;</span><span class="pln"><br>&nbsp; &nbsp; margin</span><span class="pun">-</span><span class="pln">left</span><span class="pun">:-</span><span class="lit">8px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; margin</span><span class="pun">-</span><span class="pln">top</span><span class="pun">:-</span><span class="lit">12px</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; height</span><span class="pun">:</span><span class="lit">0</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; width</span><span class="pun">:</span><span class="lit">0</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; border</span><span class="pun">:</span><span class="lit">8px</span><span class="pln"> solid transparent</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; border</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="com">#ffffff</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="com">#scroll:hover {</span><span class="pln"><br>&nbsp; &nbsp; background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="com">#e74c3c;</span><span class="pln"><br>&nbsp; &nbsp; opacity</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;</span><span class="pln">filter</span><span class="pun">:</span><span class="str">"alpha(opacity=100)"</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">filter</span><span class="pun">:</span><span class="str">"alpha(opacity=100)"</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="pun">&lt;/</span><span class="tag">style</span><span class="pun">&gt;</span><span class="pln"><br></span><span class="pun">&lt;/</span><span class="tag">head</span><span class="pun">&gt;</span><span class="pln"><br><br></span><span class="pun">&lt;</span><span class="tag">body</span><span class="pun">&gt;</span><span class="pln"><br></span><span class="com">&lt;!-- BackToTop Button --&gt;</span><span class="pln"><br></span><span class="pun">&lt;</span><span class="tag">a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"scroll"</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"Scroll to Top"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="str">display: none;</span><span class="atv">"</span><span class="pun">&gt;</span><span class="pln">Top</span><span class="pun">&lt;</span><span class="tag">span</span><span class="pun">&gt;&lt;/</span><span class="tag">span</span><span class="pun">&gt;&lt;/</span><span class="tag">a</span><span class="pun">&gt;</span><span class="pln"><br><br></span><span class="com">&lt;!-- ++++++++++++ Page Content Goes Here ++++++++++++ --&gt;</span><span class="pln"><br><br></span><span class="pun">&lt;/</span><span class="tag">body</span><span class="pun">&gt;</span><span class="pln"><br></span><span class="pun">&lt;/</span><span class="tag">html</span><span class="pun">&gt;</span></pre>
+                            <p></p>
+                        </div>
+
+                        <div class="banner-inferior">
+
+
+                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9314112849612183"
+                                data-ad-slot="7127459642" data-ad-format="auto"></ins>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+                <div id="send-friend" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h4 class="modal-title">Enviar a un amigo</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="POST" name="login">
+                                    <input type="text" name="email_friend" id="email_friend"
+                                        placeholder="E-mail de tu amigo" class="form-control">
+                                    <button class="article-view-new-comment-btn" type="submit">Enviar a un
+                                        amigo</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>
