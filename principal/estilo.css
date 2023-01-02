@@ -405,3 +405,7 @@ header nav a:hover{
         margin: auto;
     } */
 }
+.responsive {
+    width: 100%;
+    height: auto;
+  }
