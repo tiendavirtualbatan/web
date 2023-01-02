@@ -95,7 +95,7 @@ header nav a:hover{
     width: 50%;
 }
 #inicio .fila .col .contenedor-img{
-    max-width: 200px;
+    max-width: 300px;
     width: fit-content;
     margin: auto;
 }
