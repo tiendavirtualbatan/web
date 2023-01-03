@@ -148,14 +148,13 @@
 }
 
 @media screen and (max-width: 61.75em){
-	.bb-custom-side {
+	.bb-custom-firstpage {
 		font-size: 70%;
 	}
 }
 
 @media screen and (max-width: 33em){
-	.bb-custom-side {
+	.bb-custom-firstpage {
 		font-size: 60%;
 	}
 }
-

@@ -1,7 +1,8 @@
 .hideScroll {
     overflow: auto;
     height: 100%;
-    scrollbar-width: none; /*Firefox*/
+    scrollbar-width: none;
+     /*Firefox*/
   }
   
   /*Webkit*/
@@ -10,60 +11,7 @@
   }
   .responsive {
     width: auto;
-    height: 95%;
-
-  }
-  @media (min-width: 320px) {
-    .bb-custom-firstpage {
-      flex-wrap: nowrap;
-    }
-
-    div {
-      flex-basis: 33%;
-    }
-  }
-  @media (min-width: 480px) {
-    .bb-custom-firstpage {
-      flex-wrap: nowrap;
-    }
-
-    div {
-      flex-basis: 33%;
-    }
-  }
-  @media (min-width: 600px) {
-    .bb-custom-firstpage {
-      flex-wrap: nowrap;
-    }
-
-    div {
-      flex-basis: 33%;
-    }
-  }
-  @media (min-width: 768px) {
-    .bb-custom-firstpage {
-      flex-wrap: nowrap;
-    }
-
-    div {
-      flex-basis: 33%;
-    }
-  }
-  @media (min-width: 900px) {
-    .bb-custom-firstpage {
-      flex-wrap: nowrap;
-    }
-
-    div {
-      flex-basis: 33%;
-    }
-  }
-  @media (min-width: 1200px) {
-    .bb-custom-firstpage {
-      flex-wrap: nowrap;
-    }
-
-    div {
-      flex-basis: 33%;
-    }
+    max-width: 99%;
+    height: auto;
+    max-height: 99%;
   }
