@@ -14,3 +14,17 @@
     max-width: 99%;
     height: auto;
   }
+  /* Start  styling the page */
+.container-audio {
+  width: 66%;
+  height: auto;
+  padding: 1px;
+  border-radius: 5px;
+  background-color: rgba(238, 238, 238, 0);
+  color: rgb(68, 68, 68);
+  margin: 20px auto;
+  overflow: hidden;
+}
+audio {
+  width:100%;
+}
