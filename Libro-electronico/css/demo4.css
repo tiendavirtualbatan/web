@@ -147,14 +147,3 @@
 	height: 470px;
 }
 
-@media screen and (max-width: 61.75em){
-	.bb-custom-firstpage {
-		font-size: 70%;
-	}
-}
-
-@media screen and (max-width: 33em){
-	.bb-custom-firstpage {
-		font-size: 60%;
-	}
-}
