@@ -38,6 +38,56 @@
     <div class="fila">
         <div class="col">
             <div class="trabajo"><a href="Cine-Pelis/index.html"><img src="principal/img/11.jpg" alt="" class="responsive"></a></div>
+            <div id="smart-button-container">
+                <div style="text-align: center;">
+                  <div id="paypal-button-container"></div>
+                </div>
+              </div>
+            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+            <script>
+              function initPayPalButton() {
+                paypal.Buttons({
+                  style: {
+                    shape: 'pill',
+                    color: 'gold',
+                    layout: 'vertical',
+                    label: 'buynow',
+                    
+                  },
+          
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{"description":"Pagar","amount":{"currency_code":"USD","value":1}}]
+                    });
+                  },
+          
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(orderData) {
+                      
+                      // Full available details
+                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          
+                      // Show a success message within this page, e.g.
+                      const element = document.getElementById('paypal-button-container');
+                      element.innerHTML = '';
+                      element.innerHTML = '<h3>Thank you for your payment!</h3>';
+          
+                      // Or go to another URL:  actions.redirect('thank_you.html');
+                      
+                    });
+                  },
+          
+                  onError: function(err) {
+                    console.log(err);
+                  }
+                }).render('#paypal-button-container');
+              }
+              initPayPalButton();
+            </script>
+            <br>
+            <br>
+
+
             <div class="trabajo"><a href="https://www.consulta.tse.go.cr/ReimpresionCedular/?fbclid=IwAR3Ygf7nqzXcHD9Tc-dF79IKFAgDegg79zGYYVdJPPn66oNh8k4mc94q8zI"><img src="principal/img/6.jpg" alt=""></a></div>
             <div class="trabajo"><a href="https://apps.samsung.com/appquery/appDetail.as?appId=com.launcher.os.launcher"><img src="principal/img/1.jpg" alt=""></a></div>
             <div class="trabajo"><a href="google_domains_github_dominio/index.html"><img src="principal/img/16.jpg" alt=""></a></div>
