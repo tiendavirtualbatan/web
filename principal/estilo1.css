@@ -9,12 +9,12 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: #131313b8;
+    background-color: #131313;
     color: #fff;
     padding: 0 10px;
 }
 .container{
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
 }
 /* seccion cabecera */
@@ -23,7 +23,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background: #262626;
-    padding: 30px 40px;
+    padding: 10px 40px;
     border-radius: 10px;
     margin: 30px 0;
 }
@@ -42,30 +42,6 @@ header{
     cursor: pointer;
     transition: 0.1s color;
     }
-.gradient-text-portada {
-    display: inline-block;
-    background-image: url(img/neon1.gif);
-    background-size: 100%;
-    background-position: center;
-    font-size: 30px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: bold;
-    position: relative;
-    word-wrap: break-word;
-    cursor: pointer;
-    transition: 0.1s color;
-    }
-/* .gradient-text {
-    /* Create the gradient. */
-    /* background-image: linear-gradient(45deg, #ed921a, #d5235f);*/
-      
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    /*-webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; 
-}*/
 header nav a{
     text-decoration: none;
     display: inline-block;
@@ -95,7 +71,7 @@ header nav a:hover{
     width: 50%;
 }
 #inicio .fila .col .contenedor-img{
-    max-width: 300px;
+    max-width: 200px;
     width: fit-content;
     margin: auto;
 }
@@ -114,28 +90,14 @@ header nav a:hover{
 #inicio .fila .col button{
     display: inline-block;
     border: none;
-    background: linear-gradient(45deg,rgb(186, 0, 0),rgb(198, 13, 13),rgb(167, 1, 1));
-    color: rgb(255, 255, 255);
+    background: linear-gradient(45deg, #ed921a, #d5235f);
+    color: #fff;
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 15px;
     cursor: pointer;
     margin: 10px 0;
 }
-#inicio .fila .col button{
-    animation: blink-animation 1s steps(5, start) infinite;
-    -webkit-animation: blink-animation 1s steps(5, start) infinite;
-  }
-  @keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  }
-  @-webkit-keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  }
 /* sección sobre mi */
 #sobremi{
     background-color: #262626;
@@ -222,7 +184,6 @@ header nav a:hover{
     height: 10px;
     border-radius: 50%;
     background-color: #fff;
-    background-image: url(img/aura.gif);
     display: block;
     position: absolute;
     left:-6px;
@@ -241,17 +202,15 @@ header nav a:hover{
     font-size: 24px;
     text-align: center;
 }
-
 #porfolio .fila{
     display: flex;
     justify-content: space-between;
 }
-
 #porfolio .fila .col{
-    width: 28%;
+    width: 30%;
 }
 #porfolio .fila .trabajo{
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
     margin-bottom: 20px;
@@ -298,7 +257,7 @@ header nav a:hover{
 }
 #contacto .redes a{
     text-decoration: none;
-    font-size: 50px;
+    font-size: 25px;
     display: inline-block;
     margin: 0 20px;
 }
@@ -398,10 +357,10 @@ header nav a:hover{
         text-align: left;
     }
     #porfolio .fila{
-        display: flex;
+        display: block;
         text-align: center;
     }
-   #porfolio .fila .col{
+    #porfolio .fila .col{
         width: 80%;
         margin: auto;
     }
