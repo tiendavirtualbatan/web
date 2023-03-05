@@ -27,45 +27,11 @@ header{
     border-radius: 10px;
     margin: 30px 0;
 }
-.gradient-text-titulo {
-    display: inline-block;
-    background-image: url(img/neon1.gif);
-    background-size: 200%;
-    background-position: center;
-    font-size: 30px;
-    background-clip: text;
+.gradient-text {
+    background-image: linear-gradient(45deg, #ffffff, #ffffff);
     -webkit-background-clip: text;
-    color: transparent;
-    font-weight: bold;
-    position: relative;
-    word-wrap: break-word;
-    cursor: pointer;
-    transition: 0.1s color;
-    }
-.gradient-text-portada {
-    display: inline-block;
-    background-image: url(img/neon1.gif);
-    background-size: 100%;
-    background-position: center;
-    font-size: 30px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: bold;
-    position: relative;
-    word-wrap: break-word;
-    cursor: pointer;
-    transition: 0.1s color;
-    }
-/* .gradient-text {
-    /* Create the gradient. */
-    /* background-image: linear-gradient(45deg, #ed921a, #d5235f);*/
-      
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    /*-webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; 
-}*/
+    -webkit-text-fill-color: transparent; 
+}
 header nav a{
     text-decoration: none;
     display: inline-block;
@@ -106,9 +72,11 @@ header nav a:hover{
     margin: 10px 0;
     text-transform: uppercase;
     letter-spacing: 3px;
+    color: rgb(255, 47, 147);
+    font-size: 3rem;
 }
 #inicio .fila .col h1{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin: 10px 0;
 }
 #inicio .fila .col button{
@@ -150,14 +118,14 @@ header nav a:hover{
     width: 50%;
 }
 #sobremi .fila .col h3{
-    color: #fe9018;
+    color: #18fec1;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 2.2rem;
 }
 #sobremi .fila .col h2{
     color: #fff;
     margin-bottom: 20px;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 #sobremi .fila .col p{
     font-size: 14px;
