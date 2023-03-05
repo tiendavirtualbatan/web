@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagenes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="btn.flotante.css">
 </head>
 <body oncontextmenu="return false;">
+
     <div class="ful-img" id="fulImgBox">
         <img src="imgs/1.jpg" id="fulImg" alt="">
         <span onclick="closeImg()">X</span>
@@ -38,5 +40,24 @@
         <img src=" imgs/20.jpg" onclick="openFulImg(this.src)" alt="">
     </div>
     <script src="script.js"></script>
+
+
+    <div class="sticky-container">
+        <ul class="sticky">
+            <li>
+                <img src="imgs/facebook-circle.png" width="64" height="64">
+                <p><a href="javascript:void(0);" target="_blank"><br></a></p>
+            </li>
+            <li>
+                <img src="imgs/gplus-circle.png" width="64" height="64">
+                <p><a href="javascript:void(0);" target="_blank"><br></a></p>
+            </li>
+            <li>
+                <img src="imgs/linkedin-circle.png" width="64" height="64">
+                <p><a href="/index.html"><br></a></p>
+            </li>
+        </ul>
+    </div>
+
 </body>
 </html>
