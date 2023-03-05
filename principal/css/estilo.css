@@ -104,98 +104,7 @@ header nav a:hover{
       visibility: hidden;
     }
   }
-/* sección sobre mi */
-#sobremi{
-    background-color: #262626;
-    margin: 30px 0;
-    border-radius: 10px;
-    overflow: hidden;
-}
-#sobremi .fila{
-    display: flex;
-}
-#sobremi .fila .col{
-    width: 50%;
-}
-#sobremi .fila .col h3{
-    color: #18fec1;
-    margin-bottom: 20px;
-    font-size: 2.2rem;
-}
-#sobremi .fila .col h2{
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-#sobremi .fila .col p{
-    font-size: 14px;
-}
-#sobremi .fila .col .contenedor-img{
-    width: 100%;
-}
-#sobremi .fila .col .contenedor-img img{
-    width: 100%;
-    display: block;
-}
-#sobremi .fila .info{
-    padding: 40px ;
 
-}
-/* sección curriculum */
-#curriculum{
-    background-color: #262626;
-    margin: 30px 0;
-    border-radius: 10px;
-    padding: 40px;
-}
-#curriculum  h3{
-    color: #fe9018;
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-align: center;
-}
-#curriculum .fila{
-    display: flex;
-}
-#curriculum .fila .col{
-    width: 50%;
-}
-#curriculum .fila .col .experiencia{
-    color: #fe9018;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: 100;
-    letter-spacing: 2px;
-}
-#curriculum .fila .col h2{
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 2.2rem;
-    line-height: 40px;
-}
-.txtEspecial{
-    color: #fe9018;
-}
-#curriculum .info{
-    border-left: 2px solid #fff;
-    position: relative;
-    
-}
-#curriculum .info .item{
-    padding-left: 20px;
-    margin-bottom: 30px;
-}
-#curriculum .info .item .circulo{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #fff;
-    background-image: url(img/aura.gif);
-    display: block;
-    position: absolute;
-    left:-6px;
-    margin-top: 6px;
-}
 /* sección porfolio */
 #porfolio{
     background-color: #262626;
@@ -247,72 +156,7 @@ header nav a:hover{
    width: 100%;
    display: block;
 }
-/* sección contacto */
-#contacto{
-    background-color: #262626;
-    margin: 30px 0;
-    border-radius: 10px;
-    padding: 40px;
-}
-#contacto  h3{
-    color: #fe9018;
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-align: center;
-}
-#contacto .redes{
-    text-align: center;
-    margin-bottom: 30px;
-}
-#contacto .redes a{
-    text-decoration: none;
-    font-size: 50px;
-    display: inline-block;
-    margin: 0 20px;
-}
-#contacto form{
-    max-width: 500px;
-    margin: auto;
-    background-color: #212121;
-    padding: 20px;
-    border-radius: 10px;
-}
-#contacto form .entrada{
-    margin-bottom:30px;
-}
-#contacto form label{
-    display: block;
-}
-#contacto form input{
-    background-color: transparent;
-    border: none;
-    border-bottom:1px solid #fe9018;
-    width: 100%;
-    padding: 7px 0;
-    outline: none;
-    color: #ed921a;
-}
-#contacto form textarea{
-    background-color: transparent;
-    border: none;
-    border-bottom:1px solid #fe9018;
-    width: 100%;
-    height: 100px;
-    outline: none;
-    color: #ed921a;
-    padding: 7px 0;
-}
-#contacto form button{
-    display: inline-block;
-    border: none;
-    background: linear-gradient(45deg, #ed921a, #d5235f);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 15px;
-    cursor: pointer;
-    margin: 10px 0;
-}
+
 /* sección responsive */
 @media only screen and (max-width: 700px) {
     header  nav{
@@ -347,23 +191,6 @@ header nav a:hover{
     }
     #inicio .fila .col{
         width: 100%;
-    }
-    #sobremi .fila{
-        display: block;
-        text-align: center;
-    }
-    #sobremi .fila .col{
-        width: 100%;
-    }
-    #curriculum .fila{
-        display: block;
-        text-align: center;
-    }
-    #curriculum .fila .col{
-        width: 100%;
-    }
-    #curriculum .fila .col .info{
-        text-align: left;
     }
     #porfolio .fila{
         display: flex;

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="principal/css/all.min.css"/>
+    <link rel="stylesheet" href="principal/css/estilo1.css">
+    <link rel="stylesheet" href="principal/css/arriba.css">
+    <link rel="stylesheet" href="principal/css/firefly.css">
+    <script src="principal/js/jquery.min.js"></script>
+    <script src="principal/js/arriba.js"></script>
+
+    <title>Tienda Virtual Batan</title>
+  </head>
+<body>
+<a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+<div class="container">
+<!-- encabezado y menú -->
+<header>
+  <h1>
+  <a href="planet.html" style="color:#ffffff">Tienda</a>&nbsp;&nbsp;
+  <a href="index.html" style="color:#1b993f">Inicio</a>&nbsp;&nbsp;
+  <a href="curriculum..html" style="color:#f96297">Currículum</a>&nbsp;&nbsp;
+  <a href="portafolio.html" style="color:#26c7d9">Portafolio</a>&nbsp;&nbsp;
+  <a href="contacto.html" style="color:#f71fd7">Contacto</a>&nbsp;&nbsp;
+  </h1>    
+  </header>
+
+<!-- sección porfolio -->
+
+<section id="porfolio">
+    <h3>Porfolio</h3>
+    <div class="fila">
+        <div class="col">
+            <div class="trabajo"><a href="Cine-Pelis/index.html"><img src="principal/img-portafolio/11.jpg" alt="" class="responsive"></a>
+              <br>
+              <div id="smart-button-container">
+                <div style="text-align: center;">
+                  <div id="paypal-button-container"></div>
+                </div>
+              </div>
+            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+            <script>
+              function initPayPalButton() {
+                paypal.Buttons({
+                  style: {
+                    shape: 'pill',
+                    color: 'gold',
+                    layout: 'vertical',
+                    label: 'buynow',
+                    
+                  },
+          
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{"description":"Pagar","amount":{"currency_code":"USD","value":1}}]
+                    });
+                  },
+          
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(orderData) {
+                      
+                      // Full available details
+                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          
+                      // Show a success message within this page, e.g.
+                      const element = document.getElementById('paypal-button-container');
+                      element.innerHTML = '';
+                      element.innerHTML = '<h3>Thank you for your payment!</h3>';
+          
+                      // Or go to another URL:  actions.redirect('thank_you.html');
+                      
+                    });
+                  },
+          
+                  onError: function(err) {
+                    console.log(err);
+                  }
+                }).render('#paypal-button-container');
+              }
+              initPayPalButton();
+            </script>
+            </div>
+
+            <br>
+            <br>
+
+
+            <div class="trabajo"><a href="https://www.consulta.tse.go.cr/ReimpresionCedular/?fbclid=IwAR3Ygf7nqzXcHD9Tc-dF79IKFAgDegg79zGYYVdJPPn66oNh8k4mc94q8zI"><img src="principal/img-portafolio/6.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="https://apps.samsung.com/appquery/appDetail.as?appId=com.launcher.os.launcher"><img src="principal/img-portafolio/1.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="google_domains_github_dominio/index.html"><img src="principal/img-portafolio/16.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="https://apps.samsung.com/appquery/appDetail.as?appId=com.jami.tool.hiddensetting.other"><img src="principal/img-portafolio/3.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="Libro-electronico/index4.html"><img src="principal/img-portafolio/24.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="pagina/codigos-ansii.html"><img src="principal/img-portafolio/9.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="Blogger-en-blanco/blogger-en-blanco.html"><img src="principal/img-portafolio/12.jpg" alt=""></a></div>
+        </div>
+        <div class="col">
+            <div class="trabajo"><a href="https://www.youtube.com/@tiendavirtualbatan"><img src="principal/img-portafolio/23.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="https://apps.samsung.com/appquery/appDetail.as?appId=com.launcher.os14.launcher"><img src="principal/img-portafolio/2.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="https://unlocktool.net/"><img src="principal/img-portafolio/7.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="https://frp.gsmneo.com/"><img src="principal/img-portafolio/5.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="Drones/index.html"><img src="principal/img-portafolio/10.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="https://www.mediafire.com/folder/xtuic7ggfyfdr/Win_11_22H2"><img src="principal/img-portafolio/15.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="intent://com.android.settings/#Intent;scheme=android-app;end"><img src="principal/img-portafolio/4.jpg" alt=""></a></div> 
+            <div class="trabajo"><a href="apliciones_android/see-u.html"><img src="principal/img-portafolio/17.jpg" alt=""></a></div>     
+        </div>
+        <div class="col">
+            <div class="trabajo"><a href="https://www.tiktok.com/@tiendavirtualbatan"><img src="principal/img-portafolio/21.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="https://www.mediafire.com/folder/4y8x2jsu0e4tw/Apk-Apps"><img src="principal/img-portafolio/22.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="Boton-Arriba/Boton-Arriba.html"><img src="principal/img-portafolio/8.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="freelancer-website/index.html"><img src="principal/img-portafolio/13.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="react_github/ejecutar_react_github.html"><img src="principal/img-portafolio/14.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="#"><img src="principal/img-portafolio/19.jpg" alt=""></a></div>
+            <div class="trabajo"><a href="e-commerce/index.html"><img src="principal/img-portafolio/18.jpg" alt=""></a></div> 
+            <div class="trabajo"><a href="formulario-tarjeta-credito-3d-master/index.html"><img src="principal/img-portafolio/20.jpg" alt=""></a></div>       
+        </div>
+    </div>
+</section>
+
+<!-- sección contacto -->
+
+<br><br>
+</div>
+<script src="principal/js/app.js"></script>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+
+</body>
+</html>
