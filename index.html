@@ -1,83 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="principal/css/all.min.css"/>
-    <link rel="stylesheet" href="principal/css/estilo.css">
-    <link rel="stylesheet" href="principal/css/arriba.css">
-    <link rel="stylesheet" href="principal/css/firefly.css">
-    <script src="principal/js/jquery.min.js"></script>
-    <script src="principal/js/arriba.js"></script>
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/all.min.css"/>
+    <link rel="stylesheet" href="estilos/index.css">
     <title>Tienda Virtual Batan</title>
-  </head>
-<body oncontextmenu="return false;">
-<a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none">Top<span></span></a>
-<div class="container">
-    <!-- encabezado y menú -->
-<header>
-<h1>
-  <a href="index.html" style="color: #1a9d2b">Inicio</a>&nbsp;&nbsp;
-<a href="tarjetas_credito/index.html" style="color: #1ec8d7">Tienda-Tarjeta</a>&nbsp;&nbsp;
-<a href="curriculum..html" style="color: #fd65bb">Currículum</a>&nbsp;&nbsp;
-<a href="portafolio.html" style="color: #16f834">Portafolio</a>&nbsp;&nbsp;
-<a href="contacto.html" style="color: #fe9c24">Contacto</a>&nbsp;&nbsp;
-<a href="Galeria_Imagenes/pagina-1.html" style="color: #1ec8d7">Imagenes</a>&nbsp;&nbsp;
-</h1>
-</header>
-      <!-- sección Inicio -->
-<section id="inicio">
-<div class="fila">
-<div class="col">
-<h1><p>Tienda Virtual Batan</p></h1>
-<h1 class="gradient-text">Tecnico en Computadoras <br />Celulares <br />Impresoras<br />Electronica General</h1>
-<button onclick="location.href='http://wa.me/50687895592'" type="button"><strong>Contactame</strong></button>
-</div>
-<div class="col">
-<div class="contenedor-img"><img src="principal/img/foto.png" alt="" /></div>
-</div>
-</div>
-</section>
-      <!-- sección Sobre Mí -->
-<section id="sobremi">
-<div class="fila">
-<div class="col info">
-<h3>Ingeniero Tecnico</h3>
-<h2>MICROELECTRONICA Y PROGRAMACION</h2>
-<p>Creador y Editor de fotos y videos...
-  <br>
-  Desbloqueos e instalaciones de sistemas operativos y software necesarios al gusto del cliente.
-  <br>
-  Conocimiento Avanzado en reparaciones de equipos tecnologicos de hogar y de empresas.
-  <br>
-  Instalacion de redes y camaras de vigilancia.
-</p>
-</div>
-<div class="col">
-<div class="contenedor-img"><img src="principal/img/sobremi.jpg" alt="" class="responsive" /></div>
-</div>
-</div>
-</section>
-<br/>
-<br/>
-</div>
-<script src="principal/js/app.js"></script>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
+</head>
+<body>
+    <div class="container">
+        <!-- encabezado y menú -->
+        <header id="header">
+            <h1 class="gradient-text"><a href="javascript:void(0);" style="color:#ffffff">TIENDA</a></h1>&nbsp;
+            <nav id="nav">
+                <a href="javascript:void(0);" style="color:#1b993f" onclick="seleccionar()">Inicio</a>
+                <a href="curriculum.html" style="color:#f96297" onclick="seleccionar()" >Curriculum</a>
+                <a href="portafolio.html" style="color:#26c7d9" onclick="seleccionar()">Portafolio</a>
+                <a href="contacto.html" style="color:#f71fd7" onclick="seleccionar()">Contacto</a>
+                <a href="Galeria_Imagenes/pagina-1.html" style="color:#6bf71f" onclick="seleccionar()">Imagenes</a>
+            </nav>
+        </header>
+        <!-- sección Inicio -->
+        <section id="inicio">
+            <div class="fila">
+                <div class="col">
+                    <p>Soy Milan Bornehavell</p>
+                    <h1 class="gradient-text">Diseñador Web</h1>
+                    <button>Contactame</button>
+                </div>
+                <div class="col">
+                    <div class="contenedor-img">
+                        <img src="img/index/foto.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- sección Sobre Mí -->
+        <section id="sobremi">
+            <div class="fila">
+                <div class="col info">
+                    <h3>Sobre Mí</h3>
+                    <h2>Soy Diseñador Web</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deserunt exercitationem earum laboriosam a totam. Optio, assumenda.</p>
+                </div>
+                <div class="col">
+                    <div class="contenedor-img">
+                        <img src="img/index/sobremi.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

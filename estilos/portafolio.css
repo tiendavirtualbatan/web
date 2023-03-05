@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #131313;
+    color: #fff;
+    padding: 0 10px;
+}
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+/* seccion cabecera */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #262626;
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+.gradient-text {
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #ed921a, #d5235f);
+      
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+header nav a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    margin-left: 20px;
+}
+header nav a:hover{
+    color: #fe9018;
+}
+/* sección porfolio */
+#porfolio{
+    background-color: #262626;
+    margin: 30px 0;
+    border-radius: 10px;
+    padding: 40px;
+}
+#porfolio  h3{
+    color: #fe9018;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+#porfolio .fila{
+    display: flex;
+    justify-content: space-between;
+}
+#porfolio .fila .col{
+    width: 30%;
+}
+#porfolio .fila .trabajo{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+#porfolio .fila .trabajo .desc{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    opacity: 0;
+    cursor: pointer;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #fe9018;
+}
+#porfolio .fila .trabajo .desc:hover{
+    opacity: 1;
+}
+#porfolio .fila img{
+   width: 100%;
+   display: block;
+}
+/* sección responsive */
+@media only screen and (max-width: 700px) {
+    #header{
+        display: block;
+        text-align: center;
+    }
+    #porfolio .fila{
+        display: block;
+        text-align: center;
+    }
+    #porfolio .fila .col{
+        width: 80%;
+        margin: auto;
+    }
+}

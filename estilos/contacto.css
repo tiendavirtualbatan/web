@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #131313;
+    color: #fff;
+    padding: 0 10px;
+}
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+/* seccion cabecera */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #262626;
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+.gradient-text {
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #ed921a, #d5235f);
+      
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+header nav a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    margin-left: 20px;
+}
+header nav a:hover{
+    color: #fe9018;
+}
+/* sección contacto */
+#contacto{
+    background-color: #262626;
+    margin: 30px 0;
+    border-radius: 10px;
+    padding: 40px;
+}
+#contacto  h3{
+    color: #fe9018;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+#contacto .redes{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#contacto .redes a{
+    text-decoration: none;
+    font-size: 25px;
+    display: inline-block;
+    margin: 0 20px;
+}
+#contacto form{
+    max-width: 500px;
+    margin: auto;
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 10px;
+}
+#contacto form .entrada{
+    margin-bottom:30px;
+}
+#contacto form label{
+    display: block;
+}
+#contacto form input{
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid #fe9018;
+    width: 100%;
+    padding: 7px 0;
+    outline: none;
+    color: #ed921a;
+}
+#contacto form textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid #fe9018;
+    width: 100%;
+    height: 100px;
+    outline: none;
+    color: #ed921a;
+    padding: 7px 0;
+}
+#contacto form button{
+    display: inline-block;
+    border: none;
+    background: linear-gradient(45deg, #ed921a, #d5235f);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+/* sección responsive */
+@media only screen and (max-width: 700px) {
+    #header{
+        display: block;
+        text-align: center;
+    }
+    #contacto{
+        display: block;
+        text-align: center;
+    }
+    #contacto{
+        width: 80%;
+        margin: auto;
+    }
+}
