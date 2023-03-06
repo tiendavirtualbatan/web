@@ -9,7 +9,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: #131313;
+    background-color: #1313139e;
     color: #fff;
     padding: 0 10px;
 }
@@ -27,15 +27,29 @@ header{
     border-radius: 10px;
     margin: 30px 0;
 }
-.gradient-text {
+.gradient-text-1 {
     /* Create the gradient. */
-    background-image: linear-gradient(45deg, #ed921a, #d5235f);
-      
+    background-image: linear-gradient(40deg, #fd0c99, #ffffff, #00ff2a);      
     /* Use the text as a mask for the background. */
     /* This will show the gradient as a text color rather than element bg. */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
+.gradient-text-titulo {
+    display: inline-block;
+    background-image: url(../img/index/neon1.gif);
+    background-size: 100%;
+    background-position: center;
+    font-size: 0.5rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    position: relative;
+    word-wrap: break-word;
+    cursor: pointer;
+    transition: 0.1s color;
+    }
 header nav a{
     text-decoration: none;
     display: inline-block;
@@ -60,7 +74,7 @@ header nav a:hover{
     width: 50%;
 }
 #inicio .fila .col .contenedor-img{
-    max-width: 200px;
+    /*max-width: 200px;*/
     width: fit-content;
     margin: auto;
 }
@@ -71,6 +85,9 @@ header nav a:hover{
     margin: 10px 0;
     text-transform: uppercase;
     letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: bold;   
 }
 #inicio .fila .col h1{
     font-size: 2.5rem;
@@ -79,14 +96,28 @@ header nav a:hover{
 #inicio .fila .col button{
     display: inline-block;
     border: none;
-    background: linear-gradient(45deg, #ed921a, #d5235f);
-    color: #fff;
+    background: red;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 20px;
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer;
     margin: 10px 0;
 }
+#inicio .fila .col button{
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
 /* sección sobre mi */
 #sobremi{
     background-color: #262626;
@@ -101,14 +132,14 @@ header nav a:hover{
     width: 50%;
 }
 #sobremi .fila .col h3{
-    color: #fe9018;
+    color: #18fed8;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 2.2rem;
 }
 #sobremi .fila .col h2{
     color: #fff;
     margin-bottom: 20px;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 #sobremi .fila .col p{
     font-size: 14px;

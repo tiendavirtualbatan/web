@@ -27,10 +27,9 @@ header{
     border-radius: 10px;
     margin: 30px 0;
 }
-.gradient-text {
+.gradient-text-1 {
     /* Create the gradient. */
-    background-image: linear-gradient(45deg, #ed921a, #d5235f);
-      
+    background-image: linear-gradient(40deg, #fd0c99, #ffffff, #00ff2a);      
     /* Use the text as a mask for the background. */
     /* This will show the gradient as a text color rather than element bg. */
     -webkit-background-clip: text;
@@ -53,9 +52,9 @@ header nav a:hover{
     padding: 40px;
 }
 #contacto  h3{
-    color: #fe9018;
+    color: #18fed8;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 2.2rem;
     text-align: center;
 }
 #contacto .redes{
